@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background: linear-gradient(to bottom right, #6889ff, #c668ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  border-radius: 1rem;
+  min-height: 20rem;
+  width: 55rem;
+  margin-top: 4rem;
+}
+
+header {
+  display: flex;
+  background: #2b4162;
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.toggle {
+  display: flex;
+  gap: 1.7rem;
+  align-items: center;
+}
+
+.toggle > button {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: .95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .3s ease-in;
+}
+
+.toggle > button:nth-child(1):hover,
+.toggle > button:nth-child(1).active {
+  color: #c668ff;
+}
+
+.toggle > button:nth-child(2):hover,
+.toggle > button:nth-child(2).active {
+  color: #6889ff;
+}
+
+.toggle > button:nth-child(3):hover,
+.toggle > button:nth-child(3).active {
+  color: #ffa3a5;
+}
+
+.online {
+  background-color: #c9f9ff;
+}
+
+.offline {
+  background-color: #ffa3a5;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 1rem;
+  transition: all .5s ease-in-out;
+}
+
+.item-list {
+  height: 4rem;
+  border-radius: 5rem;
+}
+
+.item-list > a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 5rem;
+  color: #2b4162;
+}
+
+.item-list > a:active {
+  color: #2b4162;
+}
+
+.image {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 5rem;
+  margin-right: 1.5rem;
+  border: 1px solid;
+}
+
+.name-channel {
+  width: 15%;
+  text-decoration: none;
+  color: #2b4162;
+}
+
+.game-title {
+  width: calc(100% - 40%);
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.views {
+  color: #c668ff;
+  font-weight: 400;
+}
+
+.not-show {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.show {
+  opacity: 1;
+  height: auto;
+}
